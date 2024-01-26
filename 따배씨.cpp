@@ -60,19 +60,38 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// int main()
+// {
+//     using namespace std;
+
+//     int x = 1;
+
+//     cout << "원래 입력은 " << x << endl;
+
+//     cin >> x;
+
+//     cout << "입력 " << x << endl;
+
+//     return 0;
+// }
+
 #include <iostream>
+
+using namespace std;
+
+int multiplyTwonumbers(int num_a, int num_b)
+{
+    int sum = num_a * num_b;
+
+    return sum;
+}
 
 int main()
 {
-    using namespace std;
-
-    int x = 1;
-
-    cout << "원래 입력은 " << x << endl;
-
-    cin >> x;
-
-    cout << "입력 " << x << endl;
-
+    cout <multiplyTwonumbers(1,2) << endl;
+    cout <multiplyTwonumbers(3,4) << endl;
+    cout <multiplyTwonumbers(8,13) << endl;
     return 0;
 }
