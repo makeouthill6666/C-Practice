@@ -344,26 +344,43 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     char grade;
+
+//     cout << "학점 A~F : ";
+//     cin >> grade;
+
+//     switch(grade)
+//     {
+//         case 'A' :
+//         case 'B' :
+//         case 'C' : cout << "pass";
+//                 break;
+//         case 'D' :
+//         case 'F' : cout << "fail";
+//                    break;
+//         default : cout << "invalid";
+//     }
+//     return 0;
+// }
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    char grade;
+    int n;
 
-    cout << "학점 A~F : ";
-    cin >> grade;
+    cout << "정수 : " ;
+    cin >> n;
 
-    switch(grade)
+    for(int counter = 0; counter < n; counter++)
     {
-        case 'A' :
-        case 'B' :
-        case 'C' : cout << "pass";
-                break;
-        case 'D' :
-        case 'F' : cout << "fail";
-                   break;
-        default : cout << "invalid";
+        cout << counter << " ";
     }
     return 0;
 }
