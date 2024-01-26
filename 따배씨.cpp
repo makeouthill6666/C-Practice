@@ -117,26 +117,51 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// using namespace std;
+
+// void print ()
+// {
+//     cout << "hello" << endl;
+// }
+
+// void addTwoNumbers(int a, int b)
+// {
+//     // return a + b;
+//     print();
+// }
+
+// int main()
+// {
+//     // int sum = addTwoNumbers(1, 2);
+
+//     addTwoNumbers (1, 2);
+
+//     return 0;
+// }
+
+
 #include <iostream>
 
 using namespace std;
 
-void print ()
-{
-    cout << "hello" << endl;
-}
-
-void addTwoNumbers(int a, int b)
-{
-    // return a + b;
-    print();
-}
-
 int main()
 {
-    // int sum = addTwoNumbers(1, 2);
+    int x = 0; // int x(0);
 
-    addTwoNumbers (1, 2);
+    cout << x << " " << &x << endl;
 
+    // int x = 1;
+
+    {
+        // int x = 1;
+        x  = 1;
+
+        cout << x << " " << &x << endl;
+    }
+    cout << x << " " << &x << endl;
+
+ 
     return 0;
 }
