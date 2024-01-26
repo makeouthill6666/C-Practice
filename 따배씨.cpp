@@ -77,21 +77,42 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// using namespace std;
+
+// int multiplyTwonumbers(int num_a, int num_b)
+// {
+//     int sum = num_a * num_b;
+
+//     return sum;
+// }
+
+// int main()
+// {
+//     cout <<multiplyTwonumbers(1,2) << endl;
+//     cout <<multiplyTwonumbers(3,4) << endl;
+//     cout <<multiplyTwonumbers(8,13) << endl;
+//     return 0;
+// }
+
 #include <iostream>
 
 using namespace std;
 
-int multiplyTwonumbers(int num_a, int num_b)
+void printhelloworld()
 {
-    int sum = num_a * num_b;
+    cout << "helloworld" << endl;
 
-    return sum;
+    return; //main으로 돌아감
+
+    cout << "helloworld 2" << endl;
+
 }
 
 int main()
 {
-    cout <<multiplyTwonumbers(1,2) << endl;
-    cout <<multiplyTwonumbers(3,4) << endl;
-    cout <<multiplyTwonumbers(8,13) << endl;
+    printhelloworld();
+
     return 0;
 }
