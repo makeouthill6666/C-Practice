@@ -90,8 +90,8 @@ int multiplyTwonumbers(int num_a, int num_b)
 
 int main()
 {
-    cout <multiplyTwonumbers(1,2) << endl;
-    cout <multiplyTwonumbers(3,4) << endl;
-    cout <multiplyTwonumbers(8,13) << endl;
+    cout <<multiplyTwonumbers(1,2) << endl;
+    cout <<multiplyTwonumbers(3,4) << endl;
+    cout <<multiplyTwonumbers(8,13) << endl;
     return 0;
 }
