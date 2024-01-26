@@ -96,23 +96,47 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// using namespace std;
+
+// void printhelloworld()
+// {
+//     cout << "helloworld" << endl;
+
+//     return; //main으로 돌아감
+
+//     cout << "helloworld 2" << endl;
+
+// }
+
+// int main()
+// {
+//     printhelloworld();
+
+//     return 0;
+// }
+
 #include <iostream>
 
 using namespace std;
 
-void printhelloworld()
+void print ()
 {
-    cout << "helloworld" << endl;
+    cout << "hello" << endl;
+}
 
-    return; //main으로 돌아감
-
-    cout << "helloworld 2" << endl;
-
+void addTwoNumbers(int a, int b)
+{
+    // return a + b;
+    print();
 }
 
 int main()
 {
-    printhelloworld();
+    // int sum = addTwoNumbers(1, 2);
+
+    addTwoNumbers (1, 2);
 
     return 0;
 }
