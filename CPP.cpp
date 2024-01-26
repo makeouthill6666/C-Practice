@@ -288,36 +288,58 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <iomanip>
+// using namespace std;
+
+// int main()
+// {
+//     double hours;
+//     double rate;
+//     double regularpay;
+//     double overpay;
+//     double totalpay;
+
+//     cout << "업무시간 : ";
+//     cin >> hours;
+//     cout << "시간당 급여 : ";
+//     cin >> rate;
+
+//     regularpay = hours * rate ;
+//     overpay = 0.0;
+
+//     if(hours > 40.0)
+//     {
+//         overpay = (hours - 40.0) * rate * 0.30;
+//     }
+
+//     totalpay = regularpay + overpay;
+
+//     cout << fixed << showpoint;
+//     cout << "일반 급여 : " << setprecision(2) << regularpay << endl;
+//     cout << "초과 급여 : " << setprecision(2) << overpay << endl;
+//     cout << "전체 급여 : " << setprecision(2) << totalpay << endl;
+//     return 0;
+// }
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main()
 {
-    double hours;
-    double rate;
-    double regularpay;
-    double overpay;
-    double totalpay;
+    int day;
 
-    cout << "업무시간 : ";
-    cin >> hours;
-    cout << "시간당 급여 : ";
-    cin >> rate;
+    cout << "0~6 범위의 정수";
+    cin >> day;
 
-    regularpay = hours * rate ;
-    overpay = 0.0;
-
-    if(hours > 40.0)
+    switch(day)
     {
-        overpay = (hours - 40.0) * rate * 0.30;
+        case 0 : cout << "일요일" << endl;
+        case 1 : cout << "월요일" << endl;
+        case 2 : cout << "화요일" << endl;
+        case 3 : cout << "수요일" << endl;
+        case 4 : cout << "목요일" << endl;
+        case 5 : cout << "금요일" << endl;
+        case 6 : cout << "토요일" << endl;
     }
-
-    totalpay = regularpay + overpay;
-
-    cout << fixed << showpoint;
-    cout << "일반 급여 : " << setprecision(2) << regularpay << endl;
-    cout << "초과 급여 : " << setprecision(2) << overpay << endl;
-    cout << "전체 급여 : " << setprecision(2) << totalpay << endl;
     return 0;
 }
