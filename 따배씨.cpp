@@ -11,30 +11,68 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// int main()
+// {
+//     int x = 123; // initialization
+//     //int x(!23); 이렇게 해도 됨
+
+//     x = 5; // assignment
+
+
+//     // int x ;
+//     // x = 123 x에 123을 대입 저장 할당
+//     // = assignment operator
+
+//     //int x;
+//     //x = x + 2;
+//     //왼쪽은 객체, 오른쪽 x는 그냥 x에 할당된 상수 값을 나타냄 그것이 바로 r value
+//     //중요한 개념
+    
+
+//     std::cout << x << std:: endl;
+//     std::cout << &x << std:: endl;
+//     //&x -> x가 메모리에서 갖는 주소
+
+//     return 0;
+// }
+
+// #include <iostream>
+
+// int main()
+// {
+//     int x = 1;
+//     x= x + 2;
+//     std::cout << x << std::endl; // 3
+
+//     int y = x;
+//     std::cout << y << std::endl; // 1 틀림 3
+
+//     //is (x+y) l value or r value ? r value
+//     std::cout << x + y << std::endl; // 2 틀림 6
+
+//     std:: cout << x << std :: endl; // 1 틀림 3
+
+//     int z;
+//     std::cout << z << std::endl; //0 원래 안나옴 틀림 32767? 이게바로 garbage
+    
+//     return 0;
+// }
+
 #include <iostream>
 
 int main()
 {
-    int x = 123; // initialization
-    //int x(!23); 이렇게 해도 됨
+    using namespace std;
 
-    x = 5; // assignment
+    int x = 1;
 
+    cout << "원래 입력은 " << x << endl;
 
-    // int x ;
-    // x = 123 x에 123을 대입 저장 할당
-    // = assignment operator
+    cin >> x;
 
-    //int x;
-    //x = x + 2;
-    //왼쪽은 객체, 오른쪽 x는 그냥 x에 할당된 상수 값을 나타냄 그것이 바로 r value
-    //중요한 개념
-    
-
-    std::cout << x << std:: endl;
-    std::cout << &x << std:: endl;
-    //&x -> x가 메모리에서 갖는 주소
+    cout << "입력 " << x << endl;
 
     return 0;
 }
-
