@@ -16,7 +16,7 @@
 // int main()
 // {
 //     int x = 123; // initialization
-//     //int x(!23); 이렇게 해도 됨
+//     //int x(123); 이렇게 해도 됨
 
 //     x = 5; // assignment
 
@@ -166,24 +166,52 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// using namespace std;
+
+// void doSomething(int x)
+// {
+//     x = 123;
+//     cout << "1 " << x << endl; //123 
+// }
+
+// int main()
+// {
+//     int x = 0;
+//     cout << "2 " << x << endl; //0
+//     doSomething(x);
+//     cout << "3 " << x << endl; //123
+
+//     return 0;
+// }
+
+// //3번만 틀림
+
+// #include <iosteam>
+
+// using namespace std;
+
+// int main()
+// {   
+//     int x = 2; // x is variable, 2 is a literal
+
+//     cout << "Hello, World" << endl; // hello world is literal
+
+//     return 0;
+// }
+
 #include <iostream>
 
 using namespace std;
 
-void doSomething(int x)
-{
-    x = 123;
-    cout << x << endl; //123 
-}
-
 int main()
 {
-    int x = 0;
-    cout << x << endl; //0
-    doSomething(x);
-    cout << x << endl; //123
+    int x = -2;
+
+    int y = (x>0) ? 1 : 2 ;
+
+    cout << y << endl;
 
     return 0;
 }
-
-//다 틀림

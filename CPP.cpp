@@ -386,19 +386,19 @@
 // }
 
 
-#include <iostream>
-#include <iomanip>
-using namespace std;
+// #include <iostream>
+// #include <iomanip>
+// using namespace std;
 
-int main()
-{
-    int startday;
-    int daysinmonth;
-    int col = 1;
+// int main()
+// {
+//     int startday;
+//     int daysinmonth;
+//     int col = 1;
 
-    do
-    {
-        /* code */
-    } while (/* condition */);
+//     do
+//     {
+//         /* code */
+//     } while (/* condition */);
     
-}
+// }
