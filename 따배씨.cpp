@@ -212,28 +212,78 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// namespace Myspace1
+// {
+//     int doSomething(int a, int b)
+//     {
+//         return a + b;
+//     }
+
+// }
+
+// int doSomething(int a, int b)
+// {
+//     return a * b;
+// }
+
+// using namespace std;
+
+// int main()
+// {
+//     cout << doSomething(3, 4) << endl;
+//     cout << Myspace1::doSomething(3, 4) << endl;
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// #define MY_ARTIST "Eve"
+
+// int main()
+// {
+//     cout << MY_ARTIST << endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// #define MAX(a, b) (((a>b)) ? (a) : (b))
+
+// int main()
+// {
+//     // cout << MAX(9, 30) << endl;
+//     cout << std::max(9, 39)<< endl;
+
+//     return 0;
+// }
+
+
 #include <iostream>
-
-namespace Myspace1
-{
-    int doSomething(int a, int b)
-    {
-        return a + b;
-    }
-
-}
-
-int doSomething(int a, int b)
-{
-    return a * b;
-}
-
+#include <algorithm>
 using namespace std;
+
+// #define LIKE_APPLE
 
 int main()
 {
-    cout << doSomething(3, 4) << endl;
-    cout << Myspace1::doSomething(3, 4) << endl;
+#ifdef LIKE_APPLE
+    cout<<"APPLE"<<endl;
+
+#endif
+
+#ifndef LIKE_APPLE
+    cout<<"Orange"<<endl;
+
+#endif
+
 
     return 0;
 }
