@@ -20,7 +20,6 @@
 
 //     x = 5; // assignment
 
-
 //     // int x ;
 //     // x = 123 x에 123을 대입 저장 할당
 //     // = assignment operator
@@ -29,7 +28,6 @@
 //     //x = x + 2;
 //     //왼쪽은 객체, 오른쪽 x는 그냥 x에 할당된 상수 값을 나타냄 그것이 바로 r value
 //     //중요한 개념
-    
 
 //     std::cout << x << std:: endl;
 //     std::cout << &x << std:: endl;
@@ -56,7 +54,7 @@
 
 //     int z;
 //     std::cout << z << std::endl; //0 원래 안나옴 틀림 32767? 이게바로 garbage
-    
+
 //     return 0;
 // }
 
@@ -141,7 +139,6 @@
 //     return 0;
 // }
 
-
 // #include <iostream>
 
 // using namespace std;
@@ -162,7 +159,6 @@
 //     }
 //     cout << x << " " << &x << endl;
 
- 
 //     return 0;
 // }
 
@@ -173,7 +169,7 @@
 // void doSomething(int x)
 // {
 //     x = 123;
-//     cout << "1 " << x << endl; //123 
+//     cout << "1 " << x << endl; //123
 // }
 
 // int main()
@@ -193,7 +189,7 @@
 // using namespace std;
 
 // int main()
-// {   
+// {
 //     int x = 2; // x is variable, 2 is a literal
 
 //     cout << "Hello, World" << endl; // hello world is literal
@@ -201,17 +197,43 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// using namespace std;
+
+// int main()
+// {
+//     int x = -2;
+
+//     int y = (x>0) ? 1 : 2 ;
+
+//     cout << y << endl;
+
+//     return 0;
+// }
+
 #include <iostream>
+
+namespace Myspace1
+{
+    int doSomething(int a, int b)
+    {
+        return a + b;
+    }
+
+}
+
+int doSomething(int a, int b)
+{
+    return a * b;
+}
 
 using namespace std;
 
 int main()
 {
-    int x = -2;
-
-    int y = (x>0) ? 1 : 2 ;
-
-    cout << y << endl;
+    cout << doSomething(3, 4) << endl;
+    cout << Myspace1::doSomething(3, 4) << endl;
 
     return 0;
 }
