@@ -336,36 +336,54 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <cmath>
+// #include <limits>
+
+// int main()
+// {
+//     using namespace std;
+
+//     short s = 1; // 2bytes = 2*8bits=16bits
+
+//     cout << std::pow(2, sizeof(short)*8-1) -1 << endl;
+//     cout << std::numeric_limits<short>::max() << endl;
+//     cout << std::numeric_limits<short>::min() << endl;
+//     cout << std::numeric_limits<short>::lowest() << endl;
+
+//     s = 32767;
+//     s = s + 1;//32768 (++s, s++)
+
+//     cout << s << endl; //overflow
+
+//     // int i = 1;
+//     // long l = 1;
+//     // long long ll = 1;
+
+//     // cout << sizeof(short) << endl; //2
+//     // cout << sizeof(int) << endl; //4
+//     // cout << sizeof(long) << endl; //8
+//     // cout << sizeof(long long) << endl; //8
+
+
+//     return 0;
+
+// }
+
 #include <iostream>
-#include <cmath>
-#include <limits>
+#include <cstdint>
 
 int main()
 {
     using namespace std;
 
-    short s = 1; // 2bytes = 2*8bits=16bits
+    std::int16_t i(5);
+    std::int8_t myint = 65;
 
-    cout << std::pow(2, sizeof(short)*8-1) -1 << endl;
-    cout << std::numeric_limits<short>::max() << endl;
-    cout << std::numeric_limits<short>::min() << endl;
-    cout << std::numeric_limits<short>::lowest() << endl;
+    cout << myint << endl;
 
-    s = 32767;
-    s = s + 1;//32768 (++s, s++)
-
-    cout << s << endl; //overflow
-
-    // int i = 1;
-    // long l = 1;
-    // long long ll = 1;
-
-    // cout << sizeof(short) << endl; //2
-    // cout << sizeof(int) << endl; //4
-    // cout << sizeof(long) << endl; //8
-    // cout << sizeof(long long) << endl; //8
-
+    std::int_fast8_t fi(5);
+    std::int_least64_t fl(5);
 
     return 0;
-
 }
