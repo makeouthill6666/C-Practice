@@ -306,32 +306,66 @@
 //     return 0;
 // }
 
+// #include <iostream>
+
+// int main()
+// {
+//     using namespace std;
+
+//     bool bvalue = true;
+//     char chvalue = 'A';
+//     float fvalue = 3.141592f;
+//     double dvalue = 3.141592;
+
+//     // cout << (bvalue ? 1 : 0) << endl;
+//     cout << chvalue << endl;
+//     cout << bvalue << endl;
+//     cout << fvalue << endl;
+//     cout << dvalue << endl;
+
+//     auto aValue = 3.141592;
+
+//     cout << sizeof(aValue) << endl;
+
+//     int a = 123; //copy initialization 소수 넣으면 원인만 나오고 컴파일 = casting
+//     int a(123); //direct initialization 소수 넣으면 원인만 나오고 컴파일
+//     int b{123}; //uniform initialization 소수 넣으면 안돌아감
+
+
+
+//     return 0;
+// }
+
 #include <iostream>
+#include <cmath>
+#include <limits>
 
 int main()
 {
     using namespace std;
 
-    bool bvalue = true;
-    char chvalue = 'A';
-    float fvalue = 3.141592f;
-    double dvalue = 3.141592;
+    short s = 1; // 2bytes = 2*8bits=16bits
 
-    // cout << (bvalue ? 1 : 0) << endl;
-    cout << chvalue << endl;
-    cout << bvalue << endl;
-    cout << fvalue << endl;
-    cout << dvalue << endl;
+    cout << std::pow(2, sizeof(short)*8-1) -1 << endl;
+    cout << std::numeric_limits<short>::max() << endl;
+    cout << std::numeric_limits<short>::min() << endl;
+    cout << std::numeric_limits<short>::lowest() << endl;
 
-    auto aValue = 3.141592;
+    s = 32767;
+    s = s + 1;//32768 (++s, s++)
 
-    cout << sizeof(aValue) << endl;
+    cout << s << endl; //overflow
 
-    int a = 123; //copy initialization
-    int a(123); //direct initialization
-    int b{123}; //uniform initialization
+    // int i = 1;
+    // long l = 1;
+    // long long ll = 1;
 
+    // cout << sizeof(short) << endl; //2
+    // cout << sizeof(int) << endl; //4
+    // cout << sizeof(long) << endl; //8
+    // cout << sizeof(long long) << endl; //8
 
 
     return 0;
+
 }
