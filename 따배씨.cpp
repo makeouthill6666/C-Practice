@@ -266,23 +266,71 @@
 // }
 
 
-#include <iostream>
-#include <algorithm>
-using namespace std;
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
 
-// #define LIKE_APPLE
+// // #define LIKE_APPLE
+
+// int main()
+// {
+// #ifdef LIKE_APPLE
+//     cout<<"APPLE"<<endl;
+
+// #endif
+
+// #ifndef LIKE_APPLE
+//     cout<<"Orange"<<endl;
+
+// #endif
+
+
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <bitset>
+
+// int main()
+// {
+//     using namespace std;
+
+//     int j = 3;
+//     int i = 1;
+//     int k = 123;
+//     char a = 'H';
+
+//     cout << (uintptr_t)static_cast<void*>(&a) << endl;
+//     cout << (uintptr_t)static_cast<void*>(&i) << endl;
+
+//     return 0;
+// }
+
+#include <iostream>
 
 int main()
 {
-#ifdef LIKE_APPLE
-    cout<<"APPLE"<<endl;
+    using namespace std;
 
-#endif
+    bool bvalue = true;
+    char chvalue = 'A';
+    float fvalue = 3.141592f;
+    double dvalue = 3.141592;
 
-#ifndef LIKE_APPLE
-    cout<<"Orange"<<endl;
+    // cout << (bvalue ? 1 : 0) << endl;
+    cout << chvalue << endl;
+    cout << bvalue << endl;
+    cout << fvalue << endl;
+    cout << dvalue << endl;
 
-#endif
+    auto aValue = 3.141592;
+
+    cout << sizeof(aValue) << endl;
+
+    int a = 123; //copy initialization
+    int a(123); //direct initialization
+    int b{123}; //uniform initialization
+
 
 
     return 0;
