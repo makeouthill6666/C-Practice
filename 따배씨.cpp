@@ -1,40 +1,41 @@
-#include <iostream>
-#include <limits>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <wait.h>
 
 int main()
 {
-    using namespace std;
+   int pid;
+   int counter = 1;
+   pid = fork();
+   if (pid<0)
+   {
+      fprintf(stderr,"Fork Failed");
+      exit(-1);
+   }
+   else if (pid==0)
+   {
+      printf("Child here!\n");
+      while (counter <6)
+      {
+         printf("Child num :%d\n", counter);
 
-    // char c1(890);
-    // char c2('A');
-    
-    // cout << c1 << " " << c2 << " " << int(c1) << " " << int(c2) << endl;
-    // //c style
-    // cout << (char)65 << endl;
-    // cout << (int)'A' << endl;
-    // //c++ style
-    // cout << char(65) << endl;
-    // cout << int('A') << endl;
+         counter++;
+         sleep(1);
+      }
+   }
+   else
+   {
+      printf("i'm parent\n");
+      while(counter <6)
+      {
+         printf("parent num: %d\n", counter);
+         counter ++;
+         sleep(1);
+      }
+      wait(NULL);
+      printf("process Complete\n");
+   }
 
-//    cin >> c1;
-//    cout << c1 << " " << int(c1) << endl;
-
-//    cin >> c1;
-//    cout << c1 << " " << int(c1) << endl;
-
-//    cin >> c1;
-//    cout << c1 << " " << int(c1) << endl;
-
-//    cin >> c1;
-//    cout << c1 << " " << int(c1) << endl;
-
-
-char c1(65);
-
-cout << sizeof(unsigned char) << endl;
-cout << (int)std::numeric_limits<unsigned char>::max() << endl;
-cout << (int)std::numeric_limits<unsigned char>::lowest() <<endl;
-
-
-return 0;
+   return 0;
 }
